@@ -26,7 +26,7 @@ html {
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
-  --big: calc(2.4rem + 1vw);
+  --big: calc(6rem + 1vw);
   --special-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
@@ -265,13 +265,11 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   position: relative;
 }
-
 .gallery img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .gallery1 {
   grid-column: 1/3;
 }
@@ -279,7 +277,6 @@ nav {
   grid-column: 3/4;
   grid-row: 1/3;
 }
-
 .gallery-head {
   position: absolute;
   top: 50%;
@@ -289,6 +286,65 @@ nav {
   padding: 5rem 10rem;
   color: white;
   text-align: center;
+}
+
+/* contact */
+
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-wrapper {
+  flex: 3 1 40rem;
+}
+.form-wrapper h2 {
+  margin-bottom: 5rem 0rem;
+}
+.form-wrapper span {
+  font-size: var(--big);
+  color: var(--special-color);
+}
+.form-wrapper label {
+  display: block;
+}
+.form-wrapper input {
+  display: block;
+  margin: 3rem 0rem;
+  background-color: var(--background-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+.form-wrapper button {
+  padding: 1rem 8rem;
+  background-color: var(--special-color);
+  border: none;
+  color: white;
+  width: 100%;
+}
+.contact img {
+  flex: 1 1 40rem;
+}
+
+/* Footer section */
+
+footer {
+  background: var(--background-color);
+  color: white;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer h4 {
+  flex: 3 1 40rem;
+  font-size: calc(1.4rem + 1vw);
+}
+footer ul {
+  flex: 1 1 40rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 842px) {
@@ -369,5 +425,30 @@ nav {
   }
   .gallery-head {
     display: none;
+  }
+
+  .contact img {
+    display: none;
+  }
+
+  .footer ul {
+    order: 1;
+  }
+
+  footer h4 {
+    text-align: center;
+    order: 2;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  html {
+    --header1: 3rem;
+    --header2: 5rem;
+    --header3: 4rem;
+    --header4: 3rem;
+    --text: 3rem;
+    --big: 8rem;
   }
 }
